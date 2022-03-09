@@ -18,6 +18,13 @@ async function bootstrap() {
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
   );
+  try {
+    const aa = readFileSync(join(__dirname, 'assets/file.png'));
+    console.log('success get asset');
+  } catch (err) {
+    console.log('fail get asset');
+    console.error(err);
+  }
 }
 
 bootstrap();
