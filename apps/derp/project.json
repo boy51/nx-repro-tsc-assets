@@ -10,19 +10,12 @@
         "outputPath": "dist/apps/derp",
         "main": "apps/derp/src/main.ts",
         "tsConfig": "apps/derp/tsconfig.app.json",
-        "assets": ["apps/derp/src/assets/**"]
+        "assets": ["apps/derp/src/assets/**"],
+        "watch": false
       },
       "configurations": {
-        "production": {
-          "optimization": true,
-          "extractLicenses": true,
-          "inspect": false,
-          "fileReplacements": [
-            {
-              "replace": "apps/derp/src/environments/environment.ts",
-              "with": "apps/derp/src/environments/environment.prod.ts"
-            }
-          ]
+        "watch": {
+          "watch": false
         }
       }
     },
