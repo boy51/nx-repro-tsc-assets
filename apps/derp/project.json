@@ -4,13 +4,13 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:webpack",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/derp",
         "main": "apps/derp/src/main.ts",
         "tsConfig": "apps/derp/tsconfig.app.json",
-        "assets": ["apps/derp/src/assets"]
+        "assets": ["apps/derp/src/assets/**"]
       },
       "configurations": {
         "production": {
